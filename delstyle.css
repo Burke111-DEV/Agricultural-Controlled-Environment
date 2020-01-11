@@ -38,40 +38,20 @@
 		padding: 0px;
 	}
 	.box1 {
-		float: left;
-		margin-left: 15.5vw;
-		height: 15vw;
-		width: 12vw;
-		background-color: #191919;
-		border: 2px;
-		border-radius: 10px;
-	}
-	.box2 {
-		float: left;
-		margin-top: 4vh;
-		margin-left: 24.75vw;
-		height: 15vw;
-		width: 12vw;
-		background-color: #191919;
-		border: 2px;
-		border-radius: 10px;
-	}
-	.box3 {
-		clear:both;
+		padding:1vw;
 		margin:auto;
-		height: 1vw;
 		width: 12vw;
-		background-color: #192519;
+		background-color: #191919;
 		border: 2px;
 		border-radius: 10px;
 	}
-	.deltext {
-		text-align: center;
-		font-size: 1vw;
-	}
-	.box1:hover, .box2:hover, .box3:hover {
+	.box1:hover{
 		transition: all 0.3s ease;
 		background-color: #101010;
+	}
+	.box1:active {
+		transition: all 0.1s ease;
+		background-color: #070707;
 	}
 	.val {
 		font-size: 3.5vw;
@@ -80,12 +60,12 @@
 	.boxtitle {
 		text-align: center;
 		margin-bottom: 5px;
-		font-size: 1vw;
 	}
 	#ts1, #ts2, #ts3, #ts4, #ts5 {
 		font-size: 75%;
 		opacity: 0.25;
 	}
+	
 @media only screen and (max-width: 600px) {
 	@font-face {
     font-family: 'hattori_hanzolight';
@@ -97,7 +77,7 @@
          url('Hattori_Hanzo-webfont.svg#hattori_hanzolight') format('svg');
     font-weight: normal;
     font-style: normal;
-}
+	}
 	body {
 		font-family: Arial;
 		background-color: #222;
@@ -110,22 +90,22 @@
 	}
 	h2, h4 {
 		font-size: 60%;
-	}
+	}	
 	#logo {
 		opacity: 0.75;
 		color-overlay: white;
 		width: 35vw;
 		margin-left: 32.5vw;
-	}
+	}	
 	#logo:hover {
 		transition: 0.2s;
 		opacity: 0.85;
-	}
+	}	
 	#content {
 		width: 100%;
 		margin: auto;
 		padding: 0px;
-	}
+	}	
 	.box1, .box2 {
 		margin-left: 25vw;
 		margin-top: 4vh;
@@ -134,39 +114,22 @@
 		background-color: #191919;
 		border: 2px;
 		border-radius: 10px;
-	}
-	#moisturebox {
-		margin-bottom: 2vh;
-	}
-	.box3 {
-		height: 3vw;
-		width: 20vw;
-		background-color: #192519;
-		border: 2px;
-		border-radius: 10px;
-	}
-	.deltext {
-		text-align: center;
-		font-size: 2vw;
-	}
+	}	
 	.box1:hover, .box2:hover {
 		transition: all 0.3s ease;
 		background-color: #101010;
-	}
+	}	
 	.val {
 		font-size: 15vw;
 		text-align: center;
-	}
+	}	
 	.boxtitle {
 		text-align: center;
 		margin-bottom: 5px;
 		font-size: 20px;
-	}
+	}	
 	#ts1, #ts2, #ts3, #ts4, #ts5 {
 		font-size: 75%;
 		opacity: 0.25;
 	}
 }
-	
-	
-	

@@ -9,14 +9,12 @@
 	<meta name="viewport" content= "width=device-width, user-scalable=no">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<title> FireBase Three </title>
-		
 		<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-auth.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-database.js"></script>
 	</head>
 	
 	<body>
-		
 		<br />
 		<img id="logo" src="ACELOGO.PNG" onClick="beginClick()"/>
 		<h4 style="margin-top: 1px; text-align: center; color: #4f9c35;"> AGRICULTURAL  CONTROLLED  ENVIRONMENT </h4>
@@ -30,13 +28,11 @@
 					<p class="boxtitle">LIGHT</p>
 					<p id="ts1" class="boxtitle">DDMMYY HH:MM:SS</p>
 				</div>
-				
 				<div id="tempbox" class="box1">
 					<p id="tempval" class="val">0%</p>
 					<p class="boxtitle">TEMPERATURE</p>
 					<p id="ts2" class="boxtitle">DDMMYY HH:MM:SS</p>
 				</div>
-				
 				<div id="co2box" class="box1">
 					<p id="co2val" class="val">0%</p>
 					<p class="boxtitle">CO2</p>
@@ -50,20 +46,22 @@
 					<p class="boxtitle">HUMIDITY</p>
 					<p id="ts4" class="boxtitle">DDMMYY HH:MM:SS</p>
 				</div>
-				
 				<div id="moisturebox" class="box2">
 					<p id="moistureval" class="val">0%</p>
 					<p class="boxtitle">MOISTURE</p>
 					<p id="ts5" class="boxtitle">DDMMYY HH:MM:SS</p>
 				</div>
-			</div>
-		
-		
+				<div id="delbox" class="box3">
+					<a href="delete.html" style="text-decoration: none; color: white;">
+						<p class="deltext">RESET DATABASE</p>
+					</a>
+				</div>
+			</div>		
+			
+				
+			
+			
 		</div>
-		
 		<script src="app.js"> </script>
-		
 	</body>
 </html>
-
-<!-- https://www.youtube.com/watch?v=noB98K6A0TY -->
