@@ -160,10 +160,10 @@
 	.boxtitle {
 		text-align: center;
 		margin-bottom: 5px;
-		font-size: 20px;
+		font-size: 7vh;
 	}
 	#ts1, #ts2, #ts3, #ts4, #ts5 {
-		font-size: 75%;
+		font-size: 4vh;
 		opacity: 0.25;
 	}
 }
