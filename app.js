@@ -1029,22 +1029,7 @@ function changeStructure() {
 		wellbeing = document.getElementById("wellbeingbox");
 	
 	console.log(size);
-	
-	temperatureik.setWidth();
-	temperatureik.setBarWidth();
-	
-	soilmoistureik.setWidth();
-	soilmoistureik.setBarWidth();
-	
-	humidityik.setWidth();
-	humidityik.setBarWidth();
-	
-	lightintensityik.setWidth();
-	lightintensityik.setBarWidth();
-	
-	co2ik.setWidth();
-	co2ik.setBarWidth();
-	
+		
 	if(size < 1000) {
 		console.log("small");
 		cntrlcntr.classList.remove("col-xs-6");
@@ -1107,6 +1092,21 @@ function changeStructure() {
 		wellbeing.classList.remove("col-xs-12");
 		wellbeing.classList.add("col-xs-6");
 	}
+	
+		temperatureik.setWidth();
+	temperatureik.setBarWidth();
+	
+	soilmoistureik.setWidth();
+	soilmoistureik.setBarWidth();
+	
+	humidityik.setWidth();
+	humidityik.setBarWidth();
+	
+	lightintensityik.setWidth();
+	lightintensityik.setBarWidth();
+	
+	co2ik.setWidth();
+	co2ik.setBarWidth();
 }
 
 window.onresize = changeStructure;
