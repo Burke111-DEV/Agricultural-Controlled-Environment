@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>ACE Control Center</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-database.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	</head>
+<body>
+	<br />
+	<div style="text-align: center"><img id="logo" src="ACELOGO.PNG" onClick="beginClick()"/>
+	<h4 id="title"> AGRICULTURAL  CONTROLLED  ENVIRONMENT </h4>
+	<h2> Web Graphical Interface</h2>
+	</div>
+	<hr / style="margin-bottom: 2vw;">
+
+	<div id="supercontainer" class="container-fluid">
+		<div id="ctrlcntr" class="col-xs-6" style="padding: 0;">
+		<h1><b>Control Centre</b></h1>
+		
+			<div id="tempbox" class="col-xs-6">
+			  <h4><b>Temperature</b></h4>
+			  <div class="well">
+				<div id="ik1"></div>
+			  </div>
+			</div>
+			
+			<div id="moistbox" class="col-xs-6">
+			  <h4><b>Soil Moisture</b></h4>
+			  <div class="well">
+				<div id="ik2"></div>
+			  </div>
+			</div>
+			
+			<div id="humidbox" class="col-xs-6">
+			  <h4><b>Humidity</b></h4>
+			  <div class="well">
+				<div id="ik3" ></div>
+			  </div>
+			</div>
+			
+			<div id="lightbox" class="col-xs-6">
+			  <h4><b>Light Intensity</b></h4>
+			  <div class="well">
+				<div id="ik4"></div>
+			  </div>
+			</div>
+			
+			<div id="carbonbox" class="col-xs-6">
+			  <h4><b>Carbon Dioxide</b></h4>
+			  <div class="well">
+				<div id="ik5"></div>
+			  </div>
+			</div>
+			
+		</div>
+		
+		
+		<div id="pep" class="col-xs-6" style="padding: 0;">
+			<div class="col-xs-12">
+				<h4><b>Plant Environment Presets</b></h4>
+				<div class="well">
+					<ul class="nav nav-pills">
+						<li class="active"><a data-toggle="pill" href="#preset1">Tropical Rainforest</a></li>
+						<li><a data-toggle="pill" href="#preset2">Tropical Savannah</a></li>
+						<li><a data-toggle="pill" href="#preset3">Taiga</a></li>
+						<li><a data-toggle="pill" href="#preset4">Mangroves</a></li>
+						<li><a data-toggle="pill" href="#preset5">Tundra</a></li>
+					</ul>
+					<div class="tab-content">
+						<div id="preset1" class="tab-pane active">
+							<img style="float: left;" width="300" src="https://www.thoughtco.com/thmb/-cpkkyETA8oJLzgJyxxi7vBeloE=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/800-tropical_wet_forests-5a19fd307bb2830019706033.png">
+							<ul>
+								<li>The average temperature in tropical rainforests ranges from 70 to 85°F (21 to 30°C). The environment is pretty wet in tropical rainforests, maintaining a high humidity of 77% to 88% year-round.</li>
+								<li>Rainfall in the tropical rainforest is year round, particularly as there are little to no seasonal changes to weather. Tropical rainforests receive annual precipitation amounts of 60 to 160 inches (152 to 406 cm).</li>
+								<li>Although tropical rainforests receive 12 hours of sunlight daily, less than 2% of that sunlight ever reaches the ground.</li>
+								<li>The environment is pretty wet in tropical rainforests, maintaining a high humidity of 77% to 88% year-round.</li>
+							</ul>
+							<button id="rainforest" onClick="setconditions(event);">Set Conditions</button>
+						</div>
+						<div id="preset2" class="tab-pane fade">
+							<img style="float: left;" width="300" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Biome_map_07.svg/1200px-Biome_map_07.svg.png" alt="Savannah Location">
+							<ul>
+								<li>The climate is usually warm and temperatures range from 68° to 86°F (20 to 30°C). Savannas exist in areas where there is a 6 - 8 month wet summer season, and a 4 - 6 month dry winter season.</li>
+								<li>The annual rainfall is from 10 - 30 inches (25 - 75 cm) per year. During the dry season, lightning often strikes the ground, igniting the dry grasses that cover the savanna.</li>
+								<li>Since tropical savannas are so close to the equator, plants receive 10 to 12 hours of sunlight during most days of the year.</li>
+								<li>Dry season records show relative humidity of 70% consistently, whereas it always remains above 80% in the wet season.</li>
+							</ul>
+							<button id="savannah" onClick="setconditions(event);">Set Conditions</button>
+						</div>
+						<div id="preset3" class="tab-pane fade">
+							<img style="float: left;" width="300" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Biome_map_06.svg/1200px-Biome_map_06.svg.png" alt="Taiga Location">
+							<ul>
+								<li>The average temperature per year is 32°F (0°C) The average temperature for the summer can be over 50°F (10°C).</li>
+								<li>In the taiga, the average temperature is below freezing for six months of the year. Total yearly precipitation in the taiga is 12 - 33 inches (30 - 85 centimeters). Although the cold winters have some snowfall, most of the precipitation comes during the warm, humid summer months.</li>
+								<li>The sunlight has a massive effect in the taiga. In the summer the sunlight is more direct then any other season. This is because the sun is directed towards the Northern Hemisphere in these months. In these months the taiga can have sunlight for up to twenty-four hours at a time. In the winter however there is very little sun because the Northern Hemisphere is tilted away from the sun.</li>
+							</ul>
+							<button id="taiga" onClick="setconditions(event);">Set Condtions</button>
+						</div>
+						<div id="preset4" class="tab-pane fade">
+							<img style="float: left;" width="300" src="https://seabedhabitats.files.wordpress.com/2012/04/world_map_mangrove_distribution.png" alt=" Mangroves Location">
+							<ul>
+								<li>Mangroves generally thrive within a temperature range of 15 – 25°C. Considered in tandem with elevated CO2 levels, a rise in atmospheric temperature may increase mangrove productivity</li>
+								<li>Mangrove trees are high energy living plants which need intense light, a proper growth medium, and frequent rinses of freshwater to do well in an aquarium, let alone grow.</li>
+								<li>Increased rainfall will result in increased growth rates and biodiversity</li>
+								<li>Air humidity during the daytime in the mangrove forests are more stable and higher than the air humidity at the sea surface level. During the daytime, air humidity in the mangrove forests (Figure 1a) fluctuates between 22% and 49%.</li>
+							</ul>
+							<button id="mangroves" onClick="setconditions(event);">Set Conditions</button>
+						</div>
+						<div id="preset5" class="tab-pane fade">
+							<img style="float: left;" width="300" src="https://upload.wikimedia.org/wikipedia/commons/0/01/Biome_map_11.png" alt="Tundra Location">
+							<ul>
+								<li>The tundra is basically summer-less, having no monthly temperature averaging above 10oC, and having at least nine months below freezing. </li>
+								<li>The summer growing season is just 50 to 60 days, when the sun shines up to 24 hours a day. The relatively few species of plants and animals that live in the harsh conditions of the tundra are essentially clinging to life.</li>
+								<li>The arctic tundra receives approximately 15 to 25 cm (6 to 10 inches) of precipitation each year, which includes both rainfall/snowfall and melting snow and ice. Alpine tundra typically receives slightly higher amounts of yearly precipitation, around 30 cm (almost 12 inches).</li>
+								<li>Humidity is relatively low in the tundra, and winds are high, adding to the dryness of the air.</li>
+							</ul>
+							<button id="tundra" onClick="setconditions(event);">Set Conditions</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="linegraphs" "class="col-xs-12">
+				<h4><b>Line Graphs</b></h4>
+				<div class="well">
+					<ul class="nav nav-pills">
+						<li class="active"><a data-toggle="pill" href="#linewell1">Temperature</a></li>
+						<li><a data-toggle="pill" href="#linewell2">Soil Moisture</a></li>
+						<li><a data-toggle="pill" href="#linewell3">Humidity</a></li>
+						<li><a data-toggle="pill" href="#linewell4">Light Intensity</a></li>
+						<li><a data-toggle="pill" href="#linewell5">Carbon Dioxide</a></li>
+						<li><a data-toggle="pill" href="#linewell6">Actuator Outputs</a></li>
+					</ul>
+					<div class="tab-content">
+						<div id="linewell1" class="tab-pane active">
+							<canvas id="lg1"></canvas>
+						</div>
+						<div id="linewell2" class="tab-pane fade">
+							<canvas id="lg2"></canvas>
+						</div>
+						<div id="linewell3" class="tab-pane fade">
+							<canvas id="lg3"></canvas>
+						</div>
+						<div id="linewell4" class="tab-pane fade">
+							<canvas id="lg4"></canvas>
+						</div>
+						<div id="linewell5" class="tab-pane fade">
+							<canvas id="lg5"></canvas>
+						</div>
+						<div id="linewell6" class="tab-pane fade">
+							<canvas id="lg6"></canvas>
+						</div>
+					</div>
+				</div>
+				
+				<div id="actuout"class="col-xs-6" style="padding-left: 0px;">
+					<h4><b>Actuator Outputs</b></h4>
+					<div class="well">
+						<div id="ik6"></div>
+					</div>
+				</div>
+				
+				<div id="wellbeingbox" class="col-xs-6" style="padding-right: 0px;">
+				<h4><b>Plant Wellbeing</b></h4>
+					<div class="well">
+						<img width="225" id="wellbeing">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
