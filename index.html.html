@@ -2,18 +2,30 @@
 <html lang="en">
 <head>
 	<title>ACE Control Center</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="style.css">
+	
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
 	<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-auth.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-database.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js"></script>
+	
 	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="style.css">
 	</head>
+	
+	<!-- 	
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js"></script>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	-->
 <body>
 	<br />
 	<div style="text-align: center"><img id="logo" src="ACELOGO.PNG" onClick="beginClick()"/>
@@ -133,12 +145,12 @@
 				<h4><b>Line Graphs</b></h4>
 				<div class="well">
 					<ul class="nav nav-pills">
-						<li class="nav-link active"><a data-toggle="pill" href="#linewell1">Temperature</a></li>
-						<li><a class="nav-link" data-toggle="pill" href="#linewell2">Soil Moisture</a></li>
-						<li><a class="nav-link" data-toggle="pill" href="#linewell3">Humidity</a></li>
-						<li><a class="nav-link" data-toggle="pill" href="#linewell4">Light Intensity</a></li>
-						<li><a class="nav-link" data-toggle="pill" href="#linewell5">Carbon Dioxide</a></li>
-						<li><a class="nav-link" data-toggle="pill" href="#linewell6">Actuator Outputs</a></li>
+						<li class="active"><a data-toggle="pill" href="#linewell1">Temperature</a></li>
+						<li><a data-toggle="pill" href="#linewell2">Soil Moisture</a></li>
+						<li><a data-toggle="pill" href="#linewell3">Humidity</a></li>
+						<li><a data-toggle="pill" href="#linewell4">Light Intensity</a></li>
+						<li><a data-toggle="pill" href="#linewell5">Carbon Dioxide</a></li>
+						<li><a data-toggle="pill" href="#linewell6">Actuator Outputs</a></li>
 					</ul>
 					<div class="tab-content">
 						<div id="linewell1" class="tab-pane active">
